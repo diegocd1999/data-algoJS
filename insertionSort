@@ -1,0 +1,19 @@
+function insertionSort(arr){
+//outer loop, goes through unsorted elements
+    for(let i = 1; i < arr.length; i++){
+        let temp = arr[i]
+        let j = i - 1
+//inner loop, compares elements and swaps back
+        while(j >= 0 && arr[j] > temp){
+            arr[j + 1] = arr[j]
+            j--
+        }
+        //inserts in the correct place
+        arr[j + 1] = temp
+    }
+} 
+
+
+const arr = [1, 4, 10, -4, 9, 7, -5, -99]
+insertionSort(arr)
+console.log(arr)
